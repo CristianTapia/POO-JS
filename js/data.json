@@ -1,41 +1,41 @@
 {
   "consultorio": [
     {
-      "nombre paciente": "Cristian"
+      "nombre": "Consultorio A"
     },
     {
-      "nombre paciente": "Pedro"
+      "nombre": "Consultorio B"
     },
     {
-      "nombre paciente": "Juan"
+      "nombre": "Consultorio C"
     },
     {
-      "nombre paciente": "Diego"
+      "nombre": "Consultorio D"
     }
   ],
 
   "paciente": [
     {
       "nombre": "Cristian",
-      "edad": "24",
+      "edad": 24,
       "rut": "24.532.015-1",
       "diagnostico": "Cáncer"
     },
     {
       "nombre": "Pedro",
-      "edad": "25",
+      "edad": 25,
       "rut": "25.666.156-9",
       "diagnostico": "Apéndice"
     },
     {
       "nombre": "Juan",
-      "edad": "90",
+      "edad": 90,
       "rut": "10.596.333-7",
       "diagnostico": "Diabetes"
     },
     {
       "nombre": "Diego",
-      "edad": "50",
+      "edad": 50,
       "rut": "12.334.222-3",
       "diagnostico": "Fractura"
     }
