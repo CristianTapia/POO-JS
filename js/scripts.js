@@ -2,7 +2,7 @@
 *               1st method                *
 ******************************************/
 
-// Search data by name
+// Display all patients data
 function Patient(name, age, rut, diagnosis) {
   this.name = name;
   this.age = age;
