@@ -1,74 +1,54 @@
-// // import Patient from './paciente.js';
-// // import patientList from './patientsList.js';
-// // import Consultorio from './consultorio.js';
+import patientListA from './patientsList.js';
+import Patient from './patientConstructor.js';
 
-// // a = ['a', 'b', 'c']
+// Usar constructor para devolver array con info de todos los pacientes
+let objList = function patientsObj(patient) {
+  return new Patient(patient.name, patient.age, patient.rut, patient.diagnosis);
+}
 
+// Prototipo para consultorios
+function Surgery(name, patients) {
+  this.name = name;
+  this.patients = patients;
+}
 
+Surgery.prototype.getName = function () {
+  return this.name;
+}
 
+Surgery.prototype.getPatients = function () {
+  return this.patients;
+}
 
-// /******************************************
-// *               1st method                *
-// ******************************************/
+const patientArray = patientListA.map(objList);
+const surgeryA = new Surgery('Consultorio A', patientArray);
+const surgeryB = new Surgery('Consultorio B', patientArray);
 
+// Mostrar la info en pantalla cuando se clickeen los botones
+let allPatients = document.getElementById("display-all");
+allPatients.addEventListener("click", getAllPatients);
 
+function getAllPatients() {
 
-// /******************************************
-// *               2nd method                *
-// ******************************************/
+  function buildListadoPacientes (patients) {
+      return patients.map(divBox)
+  }
 
+  function divBox(patient) {
+  return `
+      <div>
+          <p><b>Nombre:</b> ${patient.name}</p>
+          <p><b>Edad:</b> ${patient.age}</p>
+          <p><b>Rut:</b> ${patient.rut}</p>
+          <p><b>Diagnóstico:</b> ${patient.diagnosis}</p>
+      </div>
+      `;
+  }
 
-// // Llamar al archivo JSON con los pacientes
-// // fetch('js/data.json')
-// //   .then((response) => response.json())
-// //   .then((data) => showInfo(data));
+  document.getElementById('patients').innerHTML = `${buildListadoPacientes(surgeryA.getPatients())}`;
+  document.getElementById('patients').innerHTML = `${buildListadoPacientes(surgeryB.getPatients())}`;
 
-// // function showInfo(data) {
-// //   var patient = data.patient;
-// //   let surgery = data.surgery;
-// //   console.log('Pacientes', patient);
-// //   console.log('Consultorios', surgery);
-
-// //   let showAllPatients = document.getElementById('display-all');
-// //   showAllPatients.addEventListener('click', displayInfo);
-// //   function displayInfo() {
-// //     for (let i = 0; i < patient.length; i++) {
-// //       let patientData = patient[i];
-
-// //       console.log(patientData)
-    
-// //     }
-// //   }
-// // }
-
-
-
-
-// // Patient.prototype.information = function() {
-// // const patients = document.getElementById('patients');
-// // patients.innerHTML +=
-// //     `<div id="patients">
-// //     <br>
-// //     <div>${this.name}</div>
-// //     <div>${this.age}</div>
-// //     <div>${this.rut}</div>
-// //     <div>${this.diagnosis}</div>
-// //     </div>`;
-// // console.log(`${this.name}`)
-// // console.log(`${this.age}`)
-// // console.log(`${this.rut}`)
-// // console.log(`${this.diagnosis}`)
-// // }
-
-// //   paciente.forEach((element) => {
-// //     let persona = new Patient(
-// //       element.name,
-// //       element.age,
-// //       element.rut,
-// //       element.diagnosis
-// //     );
-// // //   });
-// // // }
+}
 
 // // /******************************************
 // // *               2nd method                *

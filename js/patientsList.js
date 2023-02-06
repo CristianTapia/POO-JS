@@ -1,3 +1,4 @@
+// Pacientes del consultorio A
 const patientListA = [
   {
     name: "Cristian",
@@ -24,3 +25,5 @@ const patientListA = [
     diagnosis: "Fractura",
   },
 ];
+
+export default patientListA;
