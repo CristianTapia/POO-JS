@@ -64,23 +64,20 @@ allPatients.addEventListener("click", getAllPatients);
 
 function getAllPatients() {
 
-    // function buildListadoPacientes (patients) {
-    //     return patients.map
-    // }
+    function buildListadoPacientes (patients) {
+        return patients.map(divBox)
+    }
 
+    function divBox(patient) {
+    return `
+        <div>
+            <p><b>Nombre:</b> ${patient.name}</p>
+            <p><b>Edad:</b> ${patient.age}</p>
+            <p><b>Rut:</b> ${patient.rut}</p>
+            <p><b>Diagnóstico:</b> ${patient.diagnosis}</p>
+        </div>
+        `;
+    }
 
-
-    const buildListadoPacientes = (patients) => {
-        return patients.map((patient)=>{
-          return `
-            <div>
-              <p><b>Nombre:</b> ${patient.name}</p>
-              <p><b>Edad:</b> ${patient.age}</p>
-              <p><b>Rut:</b> ${patient.rut}</p>
-              <p><b>Diagnóstico:</b> ${patient.diagnosis}</p>
-            </div>
-          `;
-        });
-      }
-      document.getElementById('patients').innerHTML = `${buildListadoPacientes(surgeryCheck.getPatients())}`;
+    document.getElementById('patients').innerHTML = `${buildListadoPacientes(surgeryCheck.getPatients())}`;
 }
