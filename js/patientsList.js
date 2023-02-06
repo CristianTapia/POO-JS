@@ -1,4 +1,4 @@
-const patientList = [
+const patientListA = [
   {
     name: "Cristian",
     age: 24,
@@ -24,19 +24,3 @@ const patientList = [
     diagnosis: "Fractura",
   },
 ];
-
-// const consultorio = [
-//     {
-//       name: "Consultorio A"
-//     },
-//     {
-//       name: "Consultorio B"
-//     },
-//     {
-//       name: "Consultorio C"
-//     },
-//     {
-//       name: "Consultorio D"
-//     }
-//   ];
-// export default patientList;

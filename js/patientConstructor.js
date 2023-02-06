@@ -24,7 +24,7 @@ function Surgery(name, patients) {
   }; 
   
 
-const patientList = [
+const patientListA = [
     {
       name: "Cristian",
       age: 24,
@@ -51,13 +51,11 @@ const patientList = [
     },
 ];
 
-const patientArray = patientList.map(objList);
+const patientArray = patientListA.map(objList);
 
 console.log(patientArray)
 
 const surgeryCheck = new Surgery('Consultorio A', patientArray);
-
-
 
 // Mostrar la info en pantalla cuando se clickeen los botones
 var patients = document.getElementById("patients");
@@ -65,6 +63,13 @@ let allPatients = document.getElementById("display-all");
 allPatients.addEventListener("click", getAllPatients);
 
 function getAllPatients() {
+
+    // function buildListadoPacientes (patients) {
+    //     return patients.map
+    // }
+
+
+
     const buildListadoPacientes = (patients) => {
         return patients.map((patient)=>{
           return `
@@ -78,5 +83,4 @@ function getAllPatients() {
         });
       }
       document.getElementById('patients').innerHTML = `${buildListadoPacientes(surgeryCheck.getPatients())}`;
-      document.getElementById('patients').innerHTML = `${buildListadoPacientes(getPatients())}`;
 }
