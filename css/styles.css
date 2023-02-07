@@ -1,0 +1,9 @@
+input, button {
+    border-radius: 100px;
+    padding: 10px;
+}
+
+button {
+    background-color: #329991;
+    color: white;
+}

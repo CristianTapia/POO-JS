@@ -26,4 +26,31 @@ const patientListA = [
   },
 ];
 
-export default patientListA;
+const patientListB = [
+  {
+    name: "Cristiano",
+    age: 50,
+    rut: "27.222.333-6",
+    diagnosis: "Cáncer",
+  },
+  {
+    name: "Messi",
+    age: 40,
+    rut: "9.222.555-9",
+    diagnosis: "Apéndice",
+  },
+  {
+    name: "Pirlo",
+    age: 86,
+    rut: "3.456.789-1",
+    diagnosis: "Diabetes",
+  },
+  {
+    name: "Ronaldinho",
+    age: 77,
+    rut: "5.236.147-9",
+    diagnosis: "Fractura",
+  },
+];
+
+export {patientListA, patientListB};

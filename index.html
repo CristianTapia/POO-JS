@@ -4,17 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Tarea</title>
 </head>
 <body>
     <main>
-        <input type="text">
-        <button>Buscar paciente</button>
-        <button id="display-all">Mostrar todos</button>
+        <p><b>Consultorio A</b></p>
+        <input id="search-boxA" type="text" placeholder="Ingresar nombre">
+        <button class="display-patients">Buscar paciente</button>
+        <p><b>Consultorio B</b></p>
+        <input id="search-boxB" type="text" placeholder="Ingresar nombre">
+        <button class="display-patients">Buscar paciente</button>
+        <br><br><hr><br>
+        <button class="display-patients">Mostrar Consultorio A</button>
+        <button class="display-patients">Mostrar Consultorio B</button>
+        <button class="display-patients">Mostrar todos</button>
         <div id="patients"></div>
     </main>
     <script src="js/scripts.js" type="module"></script>
     <script src="js/patientConstructor.js" type="module"></script>
     <script src="js/patientsList.js" type="module"></script>
+    <script src="js/surgeryConstructor.js" type="module"></script>
 </body>
 </html>
